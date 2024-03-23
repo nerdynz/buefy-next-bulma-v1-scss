@@ -4,7 +4,7 @@
   "description": "bulma v1 scss/sass compatible with buefy-next",
   "main": "_index.scss",
   "scripts": {
-    "sass": "sass --load-path=node_modules test-import.scss test-import.css"
+    "sass": "sass --load-path=node_modules example.scss example.css"
   },
   "repository": {
     "type": "git",
