@@ -1,8 +1,13 @@
+@use "bulma/sass/utilities/css-variables" as cv;
+@use "bulma/sass/utilities/derived-variables" as dv;
+@use "bulma/sass/form/shared";
+@use "bulma/sass/utilities/controls";
+
 $switch-width-number: 2.75 !default;
 $switch-width: $switch-width-number * 1em !default;
 $switch-padding: 0.2em !default;
 $switch-active-background-color: $primary !default;
-$switch-colors: $form-colors !default;
+$switch-colors: shared.$form-colors !default;
 
 .switch {
     @extend %unselectable;
@@ -45,7 +50,7 @@ $switch-colors: $form-colors !default;
                 border-radius: $radius;
                 width: #{($switch-width - $switch-padding * 2) * 0.5};
                 height: #{($switch-width - $switch-padding * 2) * 0.5};
-                background: $background;
+                background: dv.$background;
                 box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 3px 0 rgba(0, 0, 0, 0.05);
                 transition: transform $speed-slow $easing;
                 will-change: transform;
@@ -98,13 +103,13 @@ $switch-colors: $form-colors !default;
     &.has-left-label {
         flex-direction: row-reverse;
         .control-label {
-            padding-right: $control-padding-horizontal;
+            padding-right: controls.$control-padding-horizontal;
         }
     }
 
     &:not(.has-left-label) {
         .control-label {
-            padding-left: $control-padding-horizontal;
+            padding-left: controls.$control-padding-horizontal;
         }
     }
 
@@ -198,13 +203,13 @@ $switch-colors: $form-colors !default;
         }
     }
     &.is-small {
-        @include control-small;
+        @include controls.control-small;
     }
     &.is-medium{
-        @include control-medium;
+        @include controls.control-medium;
     }
     &.is-large {
-        @include control-large;
+        @include controls.control-large;
     }
     &[disabled] {
         opacity: 0.5;

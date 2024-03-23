@@ -1,3 +1,5 @@
+@use "bulma/sass/utilities/controls";
+
 .select {
     select {
         // TODO Remove below when the following problem will be fixed from Bulma or Safari:
@@ -8,7 +10,7 @@
         padding-right: 2.5em;
         option {
             color: $grey-dark;
-            padding: $control-padding-vertical $control-padding-horizontal;
+            padding: controls.$control-padding-vertical controls.$control-padding-horizontal;
         }
         option:disabled {
             cursor: not-allowed;

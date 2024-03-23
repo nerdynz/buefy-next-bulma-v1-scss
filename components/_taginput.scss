@@ -1,3 +1,5 @@
+@use "bulma/sass/utilities/controls";
+@import "bulma/sass/elements/tag";
 $taginput-height: calc(2em - 1px) !default;
 
 .taginput {
@@ -21,13 +23,13 @@ $taginput-height: calc(2em - 1px) !default;
             justify-content: flex-start;
             height: auto;
             &.is-small {
-                @include control-small;
+                @include controls.control-small;
             }
             &.is-medium{
-                @include control-medium;
+                @include controls.control-medium;
             }
             &.is-large {
-                @include control-large;
+                @include controls.control-large;
             }
         }
 

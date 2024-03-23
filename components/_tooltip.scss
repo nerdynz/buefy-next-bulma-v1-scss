@@ -1,3 +1,6 @@
+@use "bulma/sass/utilities/derived-variables" as dv;
+@use "bulma/sass/utilities/functions" as fn;
+
 $tooltip-arrow-size: 5px !default;
 $tooltip-arrow-margin: 2px !default;
 $tooltip-multiline-sizes: (
@@ -5,7 +8,7 @@ $tooltip-multiline-sizes: (
     medium: 240px,
     large: 300px
 ) !default;
-$tooltip-colors: $colors !default;
+$tooltip-colors: dv.$colors !default;
 
 @mixin tooltip-arrow-color($direction, $color) {
     @if ($direction == "is-top") {
@@ -138,23 +141,25 @@ $tooltip-colors: $colors !default;
     // Modifiers
     @each $name, $pair in $tooltip-colors {
         $color: nth($pair, 1);
-        $color-invert: nth($pair, 2);
+        $color-invert: fn.bulmaFindColorInvert($color);
+        // $color-invert: nth($pair, 2);
         &.is-#{$name} {
             .tooltip-content {
                 background: $color;
                 color: $color-invert;
             }
             // If light and dark colors are provided
-            @if length($pair) >= 4 {
-                $color-light: nth($pair, 3);
-                $color-dark: nth($pair, 4);
-                &.is-light {
-                    .tooltip-content {
-                        background: $color-light;
-                        color: $color-dark;
-                    }
+            // @if length($pair) >= 4 {
+            $color-light: fn.bulmaFindLightColor($color);
+            // $color-light: nth($pair, 3);
+            $color-dark:  fn.bulmaFindDarkColor($color);
+            &.is-light {
+                .tooltip-content {
+                    background: $color-light;
+                    color: $color-dark;
                 }
             }
+            // }
         }
     }
     &.is-always {
