@@ -1,6 +1,12 @@
+@use "bulma/sass/utilities/css-variables" as cv;
+@use "bulma/sass/form/shared";
+@use "bulma/sass/utilities/controls";
+@use "bulma/sass/utilities/functions" as fn;
+@import "../functions"; 
+
 $radio-active-background-color: $primary !default;
 $radio-size: 1.25em !default;
-$radio-colors: $form-colors !default;
+$radio-colors: shared.$form-colors !default;
 
 .b-radio {
     &.radio {
@@ -87,7 +93,7 @@ $radio-colors: $form-colors !default;
             }
         }
         .control-label {
-            padding-left: $control-padding-horizontal;
+            padding-left: controls.$control-padding-horizontal;
         }
         &.button {
             display: flex;
@@ -111,13 +117,13 @@ $radio-colors: $form-colors !default;
             }
         }
         &.is-small {
-            @include control-small;
+            @include controls.control-small;
         }
         &.is-medium{
-            @include control-medium;
+            @include controls.control-medium;
         }
         &.is-large {
-            @include control-large;
+            @include controls.control-large;
         }
     }
 }

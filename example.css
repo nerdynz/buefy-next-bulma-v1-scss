@@ -3284,7 +3284,7 @@ fieldset[disabled] .file-name, fieldset[disabled] .select select, .select fields
   padding: 0;
 }
 
-.is-unselectable, .carousel, .carousel-list, .b-checkbox.checkbox, .tabs, .pagination-previous,
+.is-unselectable, .carousel, .carousel-list, .b-checkbox.checkbox, .b-radio.radio, .tabs, .pagination-previous,
 .pagination-next,
 .pagination-link,
 .pagination-ellipsis, .breadcrumb, .file, .button {
@@ -22637,7 +22637,7 @@ has-background-danger.is-hoverable:active {
   --bulma-control-focus-shadow-l: 50%;
 }
 
-.b-checkbox.checkbox, .carousel-list, .carousel {
+.b-radio.radio, .b-checkbox.checkbox, .carousel-list, .carousel {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -22841,7 +22841,7 @@ button.dropdown-item.is-selected {
   --bulma-control-focus-shadow-l: 50%;
 }
 
-.b-checkbox.checkbox, .carousel, .carousel-list {
+.b-radio.radio, .b-checkbox.checkbox, .carousel, .carousel-list {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -23183,7 +23183,7 @@ button.dropdown-item.is-selected {
   --bulma-control-focus-shadow-l: 50%;
 }
 
-.carousel, .carousel-list, .b-checkbox.checkbox {
+.b-radio.radio, .carousel, .carousel-list, .b-checkbox.checkbox {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -23454,7 +23454,7 @@ button.dropdown-item.is-selected {
   --bulma-control-focus-shadow-l: 50%;
 }
 
-.carousel, .carousel-list, .b-checkbox.checkbox {
+.b-radio.radio, .carousel, .carousel-list, .b-checkbox.checkbox {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -23842,7 +23842,280 @@ button.dropdown-item.is-selected {
   --bulma-control-focus-shadow-l: 50%;
 }
 
-.carousel, .carousel-list, .b-checkbox.checkbox {
+.carousel, .carousel-list, .b-checkbox.checkbox, .b-radio.radio {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.control,
+.input,
+.textarea,
+.select select {
+  --bulma-input-h: var(--bulma-scheme-h);
+  --bulma-input-s: var(--bulma-scheme-s);
+  --bulma-input-l: var(--bulma-scheme-main-l);
+  --bulma-input-border-l: var(--bulma-border-l);
+  --bulma-input-border-l-delta: 0%;
+  --bulma-input-hover-border-l-delta: var(--bulma-hover-border-l-delta);
+  --bulma-input-active-border-l-delta: var(--bulma-active-border-l-delta);
+  --bulma-input-focus-h: var(--bulma-focus-h);
+  --bulma-input-focus-s: var(--bulma-focus-s);
+  --bulma-input-focus-l: var(--bulma-focus-l);
+  --bulma-input-focus-shadow-size: var(--bulma-focus-shadow-size);
+  --bulma-input-focus-shadow-alpha: var(--bulma-focus-shadow-alpha);
+  --bulma-input-color-l: var(--bulma-text-strong-l);
+  --bulma-input-background-l: var(--bulma-scheme-main-l);
+  --bulma-input-background-l-delta: 0%;
+  --bulma-input-height: var(--bulma-control-height);
+  --bulma-input-shadow: inset 0 0.0625em 0.125em hsla(var(--bulma-scheme-h), var(--bulma-scheme-s), var(--bulma-scheme-invert-l), 0.05);
+  --bulma-input-placeholder-color: hsla(var(--bulma-text-h), var(--bulma-text-s), var(--bulma-text-strong-l), 0.3);
+  --bulma-input-disabled-color: var(--bulma-text-weak);
+  --bulma-input-disabled-background-color: var(--bulma-background);
+  --bulma-input-disabled-border-color: var(--bulma-background);
+  --bulma-input-disabled-placeholder-color: hsla(var(--bulma-text-h), var(--bulma-text-s), var(--bulma-text-weak-l), 0.3);
+  --bulma-input-arrow: var(--bulma-link);
+  --bulma-input-icon-color: var(--bulma-text-light);
+  --bulma-input-icon-hover-color: var(--bulma-text-weak);
+  --bulma-input-icon-focus-color: var(--bulma-link);
+  --bulma-input-radius: var(--bulma-radius);
+}
+
+.b-radio.radio {
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+}
+.b-radio.radio:not(.button) {
+  margin-right: 0.5em;
+}
+.b-radio.radio:not(.button) + .radio:last-child {
+  margin-right: 0;
+}
+.b-radio.radio + .radio {
+  margin-left: 0;
+}
+.b-radio.radio input[type=radio] {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  outline: none;
+  z-index: -1;
+}
+.b-radio.radio input[type=radio] + .check {
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+  width: 1.25em;
+  height: 1.25em;
+  transition: background 150ms ease-out;
+  border-radius: 50%;
+  border: 2px solid hsl(221, 14%, 48%);
+}
+.b-radio.radio input[type=radio] + .check:before {
+  content: "";
+  display: flex;
+  position: absolute;
+  left: 50%;
+  margin-left: calc(-1.25em * 0.5);
+  bottom: 50%;
+  margin-bottom: calc(-1.25em * 0.5);
+  width: 1.25em;
+  height: 1.25em;
+  transition: transform 150ms ease-out;
+  border-radius: 50%;
+  transform: scale(0);
+  background-color: #576E9F;
+}
+.b-radio.radio input[type=radio] + .check.is-white:before {
+  background: hsl(221, 14%, 100%);
+}
+.b-radio.radio input[type=radio] + .check.is-black:before {
+  background: hsl(221, 14%, 4%);
+}
+.b-radio.radio input[type=radio] + .check.is-light:before {
+  background: hsl(221, 14%, 96%);
+}
+.b-radio.radio input[type=radio] + .check.is-dark:before {
+  background: hsl(221, 14%, 21%);
+}
+.b-radio.radio input[type=radio] + .check.is-text:before {
+  background: hsl(221, 14%, 29%);
+}
+.b-radio.radio input[type=radio] + .check.is-primary:before {
+  background: hsl(171, 100%, 41%);
+}
+.b-radio.radio input[type=radio] + .check.is-link:before {
+  background: hsl(233, 100%, 63%);
+}
+.b-radio.radio input[type=radio] + .check.is-info:before {
+  background: hsl(198, 100%, 70%);
+}
+.b-radio.radio input[type=radio] + .check.is-success:before {
+  background: hsl(153, 53%, 53%);
+}
+.b-radio.radio input[type=radio] + .check.is-warning:before {
+  background: hsl(42, 100%, 53%);
+}
+.b-radio.radio input[type=radio] + .check.is-danger:before {
+  background: hsl(348, 100%, 70%);
+}
+.b-radio.radio input[type=radio]:checked + .check {
+  border-color: #576E9F;
+}
+.b-radio.radio input[type=radio]:checked + .check.is-white {
+  border-color: hsl(221, 14%, 100%);
+}
+.b-radio.radio input[type=radio]:checked + .check.is-black {
+  border-color: hsl(221, 14%, 4%);
+}
+.b-radio.radio input[type=radio]:checked + .check.is-light {
+  border-color: hsl(221, 14%, 96%);
+}
+.b-radio.radio input[type=radio]:checked + .check.is-dark {
+  border-color: hsl(221, 14%, 21%);
+}
+.b-radio.radio input[type=radio]:checked + .check.is-text {
+  border-color: hsl(221, 14%, 29%);
+}
+.b-radio.radio input[type=radio]:checked + .check.is-primary {
+  border-color: hsl(171, 100%, 41%);
+}
+.b-radio.radio input[type=radio]:checked + .check.is-link {
+  border-color: hsl(233, 100%, 63%);
+}
+.b-radio.radio input[type=radio]:checked + .check.is-info {
+  border-color: hsl(198, 100%, 70%);
+}
+.b-radio.radio input[type=radio]:checked + .check.is-success {
+  border-color: hsl(153, 53%, 53%);
+}
+.b-radio.radio input[type=radio]:checked + .check.is-warning {
+  border-color: hsl(42, 100%, 53%);
+}
+.b-radio.radio input[type=radio]:checked + .check.is-danger {
+  border-color: hsl(348, 100%, 70%);
+}
+.b-radio.radio input[type=radio]:checked + .check:before {
+  transform: scale(0.5);
+}
+.b-radio.radio input[type=radio]:focus + .check {
+  box-shadow: 0 0 0.5em rgba(105, 116, 140, 0.8);
+}
+.b-radio.radio input[type=radio]:focus:checked + .check {
+  box-shadow: 0 0 0.5em rgba(87, 110, 159, 0.8);
+}
+.b-radio.radio input[type=radio]:focus:checked + .check.is-white {
+  box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.8);
+}
+.b-radio.radio input[type=radio]:focus:checked + .check.is-black {
+  box-shadow: 0 0 0.5em rgba(9, 10, 12, 0.8);
+}
+.b-radio.radio input[type=radio]:focus:checked + .check.is-light {
+  box-shadow: 0 0 0.5em rgba(243, 244, 246, 0.8);
+}
+.b-radio.radio input[type=radio]:focus:checked + .check.is-dark {
+  box-shadow: 0 0 0.5em rgba(46, 51, 61, 0.8);
+}
+.b-radio.radio input[type=radio]:focus:checked + .check.is-text {
+  box-shadow: 0 0 0.5em rgba(64, 70, 84, 0.8);
+}
+.b-radio.radio input[type=radio]:focus:checked + .check.is-primary {
+  box-shadow: 0 0 0.5em rgba(0, 209, 178, 0.8);
+}
+.b-radio.radio input[type=radio]:focus:checked + .check.is-link {
+  box-shadow: 0 0 0.5em rgba(66, 88, 255, 0.8);
+}
+.b-radio.radio input[type=radio]:focus:checked + .check.is-info {
+  box-shadow: 0 0 0.5em rgba(102, 209, 255, 0.8);
+}
+.b-radio.radio input[type=radio]:focus:checked + .check.is-success {
+  box-shadow: 0 0 0.5em rgba(72, 199, 142, 0.8);
+}
+.b-radio.radio input[type=radio]:focus:checked + .check.is-warning {
+  box-shadow: 0 0 0.5em rgba(255, 183, 15, 0.8);
+}
+.b-radio.radio input[type=radio]:focus:checked + .check.is-danger {
+  box-shadow: 0 0 0.5em rgba(255, 102, 133, 0.8);
+}
+.b-radio.radio input[type=radio][disabled] + .check {
+  cursor: not-allowed;
+}
+.b-radio.radio .control-label {
+  padding-left: calc(0.75em - 1px);
+}
+.b-radio.radio.button {
+  display: flex;
+}
+.b-radio.radio.button.is-selected {
+  z-index: 1;
+}
+.b-radio.radio[disabled] {
+  opacity: 0.5;
+}
+.b-radio.radio:hover input[type=radio]:not(:disabled) + .check {
+  border-color: #576E9F;
+}
+.b-radio.radio:hover input[type=radio]:not(:disabled) + .check.is-white {
+  border-color: hsl(221, 14%, 100%);
+}
+.b-radio.radio:hover input[type=radio]:not(:disabled) + .check.is-black {
+  border-color: hsl(221, 14%, 4%);
+}
+.b-radio.radio:hover input[type=radio]:not(:disabled) + .check.is-light {
+  border-color: hsl(221, 14%, 96%);
+}
+.b-radio.radio:hover input[type=radio]:not(:disabled) + .check.is-dark {
+  border-color: hsl(221, 14%, 21%);
+}
+.b-radio.radio:hover input[type=radio]:not(:disabled) + .check.is-text {
+  border-color: hsl(221, 14%, 29%);
+}
+.b-radio.radio:hover input[type=radio]:not(:disabled) + .check.is-primary {
+  border-color: hsl(171, 100%, 41%);
+}
+.b-radio.radio:hover input[type=radio]:not(:disabled) + .check.is-link {
+  border-color: hsl(233, 100%, 63%);
+}
+.b-radio.radio:hover input[type=radio]:not(:disabled) + .check.is-info {
+  border-color: hsl(198, 100%, 70%);
+}
+.b-radio.radio:hover input[type=radio]:not(:disabled) + .check.is-success {
+  border-color: hsl(153, 53%, 53%);
+}
+.b-radio.radio:hover input[type=radio]:not(:disabled) + .check.is-warning {
+  border-color: hsl(42, 100%, 53%);
+}
+.b-radio.radio:hover input[type=radio]:not(:disabled) + .check.is-danger {
+  border-color: hsl(348, 100%, 70%);
+}
+.b-radio.radio.is-small {
+  border-radius: var(--bulma-radius-small);
+  font-size: var(--bulma-size-small);
+}
+.b-radio.radio.is-medium {
+  font-size: var(--bulma-size-medium);
+}
+.b-radio.radio.is-large {
+  font-size: var(--bulma-size-large);
+}
+
+:root {
+  --bulma-control-radius: var(--bulma-radius);
+  --bulma-control-radius-small: var(--bulma-radius-small);
+  --bulma-control-border-width: 1px;
+  --bulma-control-height: 2.5em;
+  --bulma-control-line-height: 1.5;
+  --bulma-control-padding-vertical: calc(0.5em - 1px);
+  --bulma-control-padding-horizontal: calc(0.75em - 1px);
+  --bulma-control-size: var(--bulma-size-normal);
+  --bulma-control-focus-shadow-l: 50%;
+}
+
+.carousel, .carousel-list, .b-checkbox.checkbox, .b-radio.radio {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -24504,7 +24777,7 @@ button.dropdown-item.is-selected {
   --bulma-control-focus-shadow-l: 50%;
 }
 
-.carousel, .carousel-list, .b-checkbox.checkbox, .tabs {
+.carousel, .carousel-list, .b-checkbox.checkbox, .b-radio.radio, .tabs {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
