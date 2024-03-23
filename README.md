@@ -7,17 +7,15 @@
 
 # Getting Started
 
-
 1. pnpm add bulma
 2. clone this repo
-3. pnpm link -g from this cloned repo
-4. pnpm link -g buefy-next-bulma-v1-scss in __ your repo __
-5. add bulma scripts to your package json in __ your repo __
+3. pnpm link -g from this cloned repo (might eventually get on NPM)
+4. pnpm link -g buefy-next-bulma-v1-scss in **your repo**
+5. add bulma scripts to your package json in **your repo**
    
 ```
 "build-bulma": "sass --load-path=node_modules my-bulma-project.scss my-bulma-project.css",
 "start": "npm run build-bulma -- --watch"
-
 ```
 
 7. add a my-bulma-project.scss file with the following (rename it. i just want a consistant example)
@@ -49,7 +47,7 @@ $beige-lighter: #eff0eb;
 
 // Import buefy-next-bulma-v1-scss  
 @import 'buefy-next-bulma-v1-scss';
-`
+```
 8. run `pnpm build-bulma` with the above import and it should spit out a good css file
 9. include that css file in your project
 
@@ -59,7 +57,7 @@ Bulma sass starting point here
 
 
 ## Notes
-__ Dont use the scss file instead build and import the resulting css file__
+**Dont use the scss file instead build and import the resulting css fil**
 
 
 ## DEV Notes
