@@ -58,10 +58,14 @@ Bulma sass starting point here
 [Bulma With Sass Example](https://bulma.io/documentation/customize/with-sass/#create-your-sass-file)
 
 
-## Notes
-**Dont use the scss file instead build and import the resulting css fil**
-
 
 ## DEV Notes
 breakpoints are now include mx.breakpoint (mx is aliased - bulma does this)
 `@include tablet` becomes  -> `@include mx.breakpoint("tablet")`
+
+Color pairs no longer work. Instead i've used
+fn.bulmaFindLightColor($color);
+fn.bulmaFindDarkColor($color);
+fn.bulmaFindColorInvert($color);
+
+Need to test above with tags or tooltip. maybe button
