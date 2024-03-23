@@ -1,4 +1,6 @@
-## WIP: only datepicker and table is done right now. Use this as an example
+
+> :warning: WIP: Not all scss files are included right now.. Use this as an example as I work through them
+
 
 # Development 
 1. run `pnpm sass` and it will test a build and show any errors.
