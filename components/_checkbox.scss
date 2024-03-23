@@ -1,12 +1,15 @@
 @use "bulma/sass/utilities/css-variables" as cv;
 @use "bulma/sass/form/shared";
+@use "bulma/sass/utilities/controls";
+@use "bulma/sass/utilities/functions" as fn;
+@import "../functions"; 
 
 $checkbox-active-background-color: $primary !default;
 $checkbox-background-color: transparent !default;
 $checkbox-border-color: $grey !default;
 $checkbox-border-radius: $radius !default;
 $checkbox-border-width: 2px !default;
-$checkbox-checkmark-color: cv.getVar("primary-invert") !default;
+$checkbox-checkmark-color: fn.bulmaFindColorInvert($primary) !default;
 $checkbox-size: 1.25em !default;
 $checkbox-colors: shared.$form-colors !default;
 
@@ -42,7 +45,9 @@ $checkbox-colors: shared.$form-colors !default;
                 border-color: $checkbox-active-background-color;
                 @each $name, $pair in $checkbox-colors {
                     $color: nth($pair, 1);
-                    $color-invert: nth($pair, 2);
+                    // $color-invert: nth($pair, 2);
+                    $color-invert: fn.bulmaFindColorInvert($color);
+
                     &.is-#{$name} {
                         background: $color url(checkmark($color-invert)) no-repeat center center;
                         border-color: $color;
@@ -54,7 +59,8 @@ $checkbox-colors: shared.$form-colors !default;
                 border-color: $checkbox-active-background-color;
                 @each $name, $pair in $checkbox-colors {
                     $color: nth($pair, 1);
-                    $color-invert: nth($pair, 2);
+                    // $color-invert: nth($pair, 2);
+                    $color-invert: fn.bulmaFindColorInvert($color);
                     &.is-#{$name} {
                         background: $color url(indeterminate($color-invert)) no-repeat center center;
                         border-color: $color;
@@ -77,7 +83,7 @@ $checkbox-colors: shared.$form-colors !default;
             }
         }
         .control-label {
-            padding-left: $control-padding-horizontal;
+            padding-left: controls.$control-padding-horizontal;
         }
         &.button {
             display: flex;
@@ -97,13 +103,13 @@ $checkbox-colors: shared.$form-colors !default;
             }
         }
         &.is-small {
-            @include control-small;
+            @include controls.control-small;
         }
         &.is-medium{
-            @include control-medium;
+            @include controls.control-medium;
         }
         &.is-large {
-            @include control-large;
+            @include controls.control-large;
         }
     }
 }

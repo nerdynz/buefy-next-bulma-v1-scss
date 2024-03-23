@@ -1,16 +1,25 @@
+@use "bulma/sass/utilities/css-variables" as cv;
+@use "bulma/sass/utilities/derived-variables" as dv;
+@use "bulma/sass/utilities/initial-variables" as iv;
+@use "bulma/sass/utilities/extends";
+@use "bulma/sass/utilities/mixins" as mx;
+@use "bulma/sass/components/dropdown" as dd;
+@use "bulma/sass/form/shared";
+@use "bulma/sass/utilities/controls";
+
 $carousel-min-height: 120px !default;
 
-$carousel-arrow-background: $scheme-main !default;
+$carousel-arrow-background: dv.$scheme-main !default;
 $carousel-arrow-color: $primary !default;
 $carousel-arrow-icon-spaced: 1.5rem !default;
 $carousel-arrow-top: 50% !default;
 
-$carousel-indicator-background: rgba($scheme-invert, 0.50) !default;
-$carousel-indicator-border: $scheme-main !default;
+$carousel-indicator-background: rgba(dv.$scheme-invert, 0.50) !default;
+$carousel-indicator-border: dv.$scheme-main !default;
 $carousel-indicator-color: $primary !default;
 $carousel-indicator-spaced: .5rem !default;
 
-$carousel-overlay-background: rgba($scheme-invert, 0.86) !default;
+$carousel-overlay-background: rgba(dv.$scheme-invert, 0.86) !default;
 $carousel-overlay-z: 40 !default;
 
 .carousel {
@@ -46,7 +55,7 @@ $carousel-overlay-z: 40 !default;
         overflow: hidden;
         width: 100%;
         &:hover .carousel-arrow.is-hovered {
-            @include tablet {
+            @include mx.breakpoint("tablet") {
                 opacity: 1;
             }
         }
@@ -74,7 +83,7 @@ $carousel-overlay-z: 40 !default;
         &.has-custom {
             flex-wrap: nowrap;
             justify-content: flex-start;
-            @include overflow-touch;
+            @include mx.overflow-touch;
             overflow: hidden;
             overflow-x: auto;
             &.is-small .indicator-item {
@@ -135,7 +144,7 @@ $carousel-overlay-z: 40 !default;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     }
     &:hover .carousel-arrow.is-hovered {
-        @include tablet {
+        @include mx.breakpoint("tablet") {
             opacity: 1;
         }
     }

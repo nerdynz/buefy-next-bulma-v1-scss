@@ -1,4 +1,12 @@
-@import "bulma/sass/utilities/mixins";
+@use "bulma/sass/utilities/css-variables" as cv;
+@use "bulma/sass/utilities/derived-variables" as dv;
+@use "bulma/sass/utilities/initial-variables" as iv;
+@use "bulma/sass/utilities/extends";
+@use "bulma/sass/utilities/mixins" as mx;
+@use "bulma/sass/components/dropdown" as dd;
+@use "bulma/sass/form/shared";
+@use "bulma/sass/utilities/controls";
+
 
 .autocomplete {
     position: relative;
@@ -28,12 +36,12 @@
         }
     }
     &.is-small {
-        @include control-small;
+        @include controls.control-small;
     }
     &.is-medium{
-        @include control-medium;
+        @include controls.control-medium;
     }
     &.is-large {
-        @include control-large;
+        @include controls.control-large;
     }
 }
