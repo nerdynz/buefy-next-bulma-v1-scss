@@ -1,5 +1,5 @@
 
-> :warning: WIP: Not all scss files are included right now.. Use this as an example as I work through them
+> :warning: WIP:  Not all scss files are included right now.. Use this as an example as I work through them. look at _index.scss to see what is included. (all should be included when complete)
 
 
 # Development 
