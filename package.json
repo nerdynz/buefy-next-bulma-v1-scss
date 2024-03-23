@@ -1,0 +1,31 @@
+{
+  "name": "buefy-next-bulma-v1-scss",
+  "version": "1.0.0",
+  "description": "bulma v1 scss/sass compatible with buefy-next",
+  "main": "_index.scss",
+  "scripts": {
+    "sass": "sass --load-path=node_modules test-import.scss test-import.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nerdynz/buefy-next-bulma-v1-scss.git"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "bulma",
+    "v1",
+    "buefy-next",
+    "buefy"
+  ],
+  "author": "joshua cave",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nerdynz/buefy-next-bulma-v1-scss/issues"
+  },
+  "homepage": "https://github.com/nerdynz/buefy-next-bulma-v1-scss#readme",
+  "devDependencies": {
+    "bulma": "^1.0.0",
+    "sass": "^1.72.0"
+  }
+}

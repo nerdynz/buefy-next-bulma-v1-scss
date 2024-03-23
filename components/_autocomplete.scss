@@ -1,0 +1,39 @@
+@import "bulma/sass/utilities/mixins";
+
+.autocomplete {
+    position: relative;
+    .dropdown-menu {
+        display: block;
+        width: 100%;
+        &.is-opened-top {
+            top: auto;
+            bottom: 100%;
+        }
+    }
+    .dropdown-content {
+        overflow: auto;
+        max-height: var(--buefy-dropdown-content-max-height, 200px);
+    }
+    .dropdown-item {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &.is-hovered {
+            background: var(--bulma-dropdown-item-hover-background-color);
+            color:  var(--bulma-dropdown-item-hover-color);
+        }
+        &.is-disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+    &.is-small {
+        @include control-small;
+    }
+    &.is-medium{
+        @include control-medium;
+    }
+    &.is-large {
+        @include control-large;
+    }
+}

@@ -1,0 +1,7 @@
+@use 'sass:color';
+
+@use 'bulma/sass' with (
+  $family-primary: '"Nunito", sans-serif'
+);
+
+@import 'index';

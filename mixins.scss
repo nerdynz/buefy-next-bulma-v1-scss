@@ -1,0 +1,45 @@
+@mixin ring {
+  --ring-inset: ;
+  --ring-offset-shadow: var(--ring-inset) 0 0 0 var(--ring-offset-width) var(--ring-offset-color);
+  --ring-shadow: var(--ring-inset) 0 0 0 calc(2px + var(--ring-offset-width)) var(--ring-color);
+  --shadow: 0 1px 2px 0 #0000000d;
+
+  // box-shadow: var(--ring-inset) 0 0 0 calc(2px + var(--ring-offset-width)) var(--ring-color);
+  box-shadow: var(--ring-offset-shadow), var(--ring-shadow), var(--shadow, 0 0 #0000);
+
+  &.is-inset {
+    --ring-inset: inset;
+
+    box-shadow: var(--ring-inset) 0 0 0 calc(2px + var(--ring-offset-width)) var(--ring-color);
+
+    &-0 {
+      box-shadow: var(--ring-inset) 0 0 0 calc(0px + var(--ring-offset-width)) var(--ring-color);
+    }
+    &-1 {
+      box-shadow: var(--ring-inset) 0 0 0 calc(1px + var(--ring-offset-width)) var(--ring-color);
+    }
+    &-2 {
+      box-shadow: var(--ring-inset) 0 0 0 calc(2px + var(--ring-offset-width)) var(--ring-color);
+    }
+    &-4 {
+      box-shadow: var(--ring-inset) 0 0 0 calc(4px + var(--ring-offset-width)) var(--ring-color);
+    }
+    &-8 {
+      box-shadow: var(--ring-inset) 0 0 0 calc(8px + var(--ring-offset-width)) var(--ring-color);
+    }
+  }
+}
+
+@mixin ring-focus {
+  &:focus {
+    @include ring;
+  }
+}
+
+@mixin overlay($offset: 0) {
+  bottom: $offset;
+  left: $offset;
+  position: absolute;
+  right: $offset;
+  top: $offset;
+}
