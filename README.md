@@ -7,8 +7,6 @@
 
 # Getting Started
 
-
-
 1. import bulma
 2. import this project
 
