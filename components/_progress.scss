@@ -1,20 +1,25 @@
+@use "bulma/sass/utilities/css-variables" as cv;
+@use "bulma/sass/utilities/derived-variables" as dv;
+@use "bulma/sass/elements/progress" as pgs;
+@use "bulma/sass/utilities/functions" as fn;
+
 @mixin progress-size() {
     &.is-small {
         + .progress-value, .progress-value {
-            font-size: calc(#{$size-small} / 1.5);
-            line-height: $size-small;
+            font-size: calc(#{dv.$size-small} / 1.5);
+            line-height: dv.$size-small;
         }
     }
     &.is-medium {
         + .progress-value, .progress-value {
-            font-size: calc(#{$size-medium} / 1.5);
-            line-height: $size-medium;
+            font-size: calc(#{dv.$size-medium} / 1.5);
+            line-height: dv.$size-medium;
         }
     }
     &.is-large {
         + .progress-value, .progress-value {
-            font-size: calc(#{$size-large} / 1.5);
-            line-height: $size-large;
+            font-size: calc(#{dv.$size-large} / 1.5);
+            line-height: dv.$size-large;
         }
     }
 }
@@ -32,10 +37,10 @@
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        font-size: calc(#{$size-normal} / 1.5);
-        line-height: $size-normal;
+        font-size: calc(#{dv.$size-normal} / 1.5);
+        line-height: dv.$size-normal;
         font-weight: $weight-bold;
-        color: findColorInvert($progress-bar-background-color);
+        color: fn.bulmaFindColorInvert(pgs.$progress-bar-background-color);
         white-space: nowrap;
     }
 
@@ -50,12 +55,12 @@
 
         &.is-more-than-half {
             +.progress-value {
-                color: findColorInvert($progress-value-background-color);
+                color: fn.bulmaFindColorInvert(pgs.$progress-value-background-color);
             }
 
-            @each $name, $pair in $progress-colors {
+            @each $name, $pair in pgs.$progress-colors {
                 $color: nth($pair, 1);
-                $color-invert: nth($pair, 2);
+                $color-invert: fn.bulmaFindLightColor($color);
                 &.is-#{$name} {
                     + .progress-value {
                         color: $color-invert;
@@ -72,23 +77,23 @@
     &.is-not-native {
         @extend .progress;
         white-space: nowrap;
-        background-color: $progress-bar-background-color;
-        border-radius: $progress-border-radius;
+        background-color: pgs.$progress-bar-background-color;
+        border-radius: pgs.$progress-border-radius;
 
         .progress-bar {
             position: relative;
             display: inline-block;
             vertical-align: top;
             height: 100%;
-            background-color: $progress-value-background-color;
+            background-color: pgs.$progress-value-background-color;
 
             .progress-value {
-                color: findColorInvert($progress-value-background-color);
+                color: fn.bulmaFindColorInvert(pgs.$progress-value-background-color);
             }
 
-            @each $name, $pair in $progress-colors {
+            @each $name, $pair in pgs.$progress-colors {
                 $color: nth($pair, 1);
-                $color-invert: nth($pair, 2);
+                $color-invert:  fn.bulmaFindColorInvert($color);
                 &.is-#{$name} {
                     background-color: $color;
                     .progress-value {

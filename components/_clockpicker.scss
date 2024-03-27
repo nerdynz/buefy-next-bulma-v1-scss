@@ -1,4 +1,8 @@
 @use "bulma/sass/utilities/css-variables" as cv;
+@use "bulma/sass/utilities/derived-variables" as dv;
+@use "bulma/sass/utilities/functions" as fn;
+@use "bulma/sass/utilities/controls";
+@use "bulma/sass/form/shared";
 
 .b-clockpicker {
     // Clockpicker variables defined here as exact numbers
@@ -19,7 +23,8 @@
     // mixins for supporting all $form-colors defined in Bulma/custom
     @mixin b-clockpicker-colors($name, $pair) {
         &.is-#{$name} {
-            @include b-clockpicker-colors-set(nth($pair, 1), nth($pair, 2))
+            $color: nth($pair, 1);
+            @include b-clockpicker-colors-set($color, fn.bulmaFindColorInvert($color));
         }
     }
 
@@ -43,9 +48,9 @@
         }
     }
 
-    @include b-clockpicker-colors-set($primary, cv.getVar("primary-invert"));
+    @include b-clockpicker-colors-set($primary, fn.bulmaFindColorInvert($primary));
 
-    @each $name, $pair in $form-colors {
+    @each $name, $pair in shared.$form-colors {
         @include b-clockpicker-colors($name, $pair)
     }
 
@@ -57,7 +62,7 @@
         width: 100%;
         .input[readonly] {
             cursor: pointer;
-            box-shadow: $input-shadow;
+            box-shadow: shared.$input-shadow;
             &:focus,
             &.is-focused,
             &:active,
@@ -273,12 +278,12 @@
     }
     // Sizes
     &.is-small {
-        @include control-small;
+        @include controls.control-small;
     }
     &.is-medium {
-        @include control-medium;
+        @include controls.control-medium;
     }
     &.is-large {
-        @include control-large;
+        @include controls.control-large;
     }
 }

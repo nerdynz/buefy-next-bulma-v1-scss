@@ -1,5 +1,10 @@
+@use "bulma/sass/utilities/css-variables" as cv;
+@use "bulma/sass/utilities/derived-variables" as dv;
+@use "bulma/sass/utilities/initial-variables" as iv;
+@use "bulma/sass/utilities/mixins" as mx;
+
 $dropdown-mobile-breakpoint: $desktop !default;
-$dropdown-background-color: rgba($scheme-invert, 0.86) !default;
+$dropdown-background-color: rgba(dv.$scheme-invert, 0.86) !default;
 $dropdown-disabled-opacity: 0.5 !default;
 
 .dropdown {
@@ -135,7 +140,7 @@ $dropdown-disabled-opacity: 0.5 !default;
 }
 
 html.is-clipped-touch {
-    @include touch {
+    @include mx.breakpoint("touch") {
         overflow: hidden !important;
     }
 }

@@ -1,3 +1,6 @@
+@use "bulma/sass/utilities/mixins" as mx;
+@use "bulma/sass/components/pagination" as pg;
+
 @mixin paginationPositions($classes...) {
     @for $i from 0 to length($classes) {
        #{nth($classes, $i + 1)} {
@@ -9,8 +12,8 @@
 .pagination {
     .pagination-next,
     .pagination-previous {
-        padding-left: $pagination-nav-padding-left;
-        padding-right: $pagination-nav-padding-right;
+        padding-left: pg.$pagination-nav-padding-left;
+        padding-right: pg.$pagination-nav-padding-right;
         &.is-disabled {
             pointer-events: none;
             cursor: not-allowed;
@@ -32,7 +35,7 @@
     }
 }
 
-@include tablet {
+@include mx.breakpoint("tablet") {
     .pagination.has-input {
         @include paginationPositions(".pagination-list", ".pagination-input", ".pagination-previous", ".pagination-next");
         &.is-centered {

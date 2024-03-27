@@ -1,3 +1,4 @@
+@use "bulma/sass/utilities/derived-variables" as dv;
 
 $skeleton-color: $grey-lighter !default;
 $skeleton-background: linear-gradient(90deg, $skeleton-color 25%, rgba($skeleton-color, 0.5) 50%, $skeleton-color 75%) !default;
@@ -44,15 +45,15 @@ $skeleton-margin-top: .5rem !default;
     + .b-skeleton {
         margin-top: $skeleton-margin-top;
     }
-    @include steps-size($size-normal);
+    @include steps-size(dv.$size-normal);
     &.is-small {
-        @include steps-size($size-small);
+        @include steps-size(dv.$size-small);
     }
     &.is-medium {
-        @include steps-size($size-medium);
+        @include steps-size(dv.$size-medium);
     }
     &.is-large {
-        @include steps-size($size-large);
+        @include steps-size(dv.$size-large);
     }
 }
 

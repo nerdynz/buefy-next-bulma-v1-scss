@@ -1,13 +1,17 @@
-$sidebar-background: $modal-background-background-color !default;
+@use "bulma/sass/utilities/derived-variables" as dv;
+@use "bulma/sass/components/modal";
+@use "bulma/sass/components/navbar";
+
+$sidebar-background: modal.$modal-background-background-color !default;
 $sidebar-box-shadow: 5px 0px 13px 3px rgba($black, 0.1) !default;
 $sidebar-width: 260px !default;
 $sidebar-mobile-width: 80px !default;
 $sidebar-mobile-breakpoint: $tablet !default;
-$sidebar-colors: $navbar-colors !default;
+$sidebar-colors: navbar.$navbar-colors !default;
 
 .b-sidebar {
     .sidebar-content {
-        background-color: $background;
+        background-color: dv.$background;
         box-shadow: $sidebar-box-shadow;
         width: $sidebar-width;
         z-index: 39;

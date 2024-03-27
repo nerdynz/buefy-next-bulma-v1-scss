@@ -5,8 +5,14 @@ Wikiki (https://github.com/Wikiki) licensed under
 MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 */
 
+@use "bulma/sass/utilities/derived-variables" as dv;
+@use "bulma/sass/base/generic";
+@use "bulma/sass/utilities/functions" as fn;
+@use "bulma/sass/utilities/mixins" as mx;
+
+
 $steps-items-focused-outline: none !default;
-$steps-details-background-color: $body-background-color !default;
+$steps-details-background-color: generic.$body-background-color !default;
 $steps-maker-default-color: $grey-light !default;
 $steps-marker-default-border: .2em solid #fff !default;
 $steps-default-color: $grey-lighter !default;
@@ -15,7 +21,7 @@ $steps-active-color: $primary !default;
 $steps-divider-height: .2em !default;
 $steps-vertical-padding: 1em 0 !default;
 $steps-mobile-max-width: $tablet !default;
-$steps-colors: $colors !default;
+$steps-colors: dv.$colors !default;
 
 @mixin steps-size($size) {
     .steps {
@@ -55,7 +61,7 @@ $steps-colors: $colors !default;
                     }
                 }
 
-                @include until($steps-mobile-max-width) {
+                @include mx.until($steps-mobile-max-width) {
                     &::before, &::after, &:not(:first-child)::before {
                         top: #{$size};
                     }
@@ -138,7 +144,7 @@ $steps-colors: $colors !default;
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
-                    color: $body-color;
+                    color: generic.$body-color;
 
                     &:not(.is-clickable) {
                         cursor: not-allowed;
@@ -152,7 +158,7 @@ $steps-colors: $colors !default;
                     font-weight: $weight-bold;
                     justify-content: center;
                     background: $steps-maker-default-color;
-                    color: $scheme-main;
+                    color: dv.$scheme-main;
                     border: $steps-marker-default-border;
                     z-index: 1;
                     overflow: hidden;
@@ -161,7 +167,7 @@ $steps-colors: $colors !default;
                 // Override marker color per step
                 @each $name, $pair in $steps-colors {
                     $color: nth($pair, 1);
-                    $color-invert: nth($pair, 2);
+                    $color-invert: fn.bulmaFindColorInvert($color);
 
                     &.is-#{$name} {
                         &::before, &::after {
@@ -171,7 +177,7 @@ $steps-colors: $colors !default;
                         }
                         &.is-active {
                             .step-marker {
-                                background-color: $scheme-main;
+                                background-color: dv.$scheme-main;
                                 border-color: $color;
                                 color: $color;
                             }
@@ -194,7 +200,7 @@ $steps-colors: $colors !default;
                 }
 
                 .step-marker{
-                    color: $scheme-main;
+                    color: dv.$scheme-main;
                 }
 
                 .step-details {
@@ -246,7 +252,7 @@ $steps-colors: $colors !default;
                     }
 
                     .step-marker {
-                        background-color: $scheme-main;
+                        background-color: dv.$scheme-main;
                         border-color: $steps-active-color;
                         color: $steps-active-color;
                     }
@@ -257,7 +263,7 @@ $steps-colors: $colors !default;
                 }
                 &.is-previous {
                     .step-marker {
-                        color: $scheme-main;
+                        color: dv.$scheme-main;
                         background-color: $steps-previous-color;
                     }
 
@@ -330,15 +336,15 @@ $steps-colors: $colors !default;
         }
     }
 
-    @include steps-size($size-normal);
+    @include steps-size(dv.$size-normal);
     &.is-small {
-        @include steps-size($size-small);
+        @include steps-size(dv.$size-small);
     }
     &.is-medium {
-        @include steps-size($size-medium);
+        @include steps-size(dv.$size-medium);
     }
     &.is-large {
-        @include steps-size($size-large);
+        @include steps-size(dv.$size-large);
     }
 
     &.is-vertical {
@@ -450,7 +456,7 @@ $steps-colors: $colors !default;
     }
     &:not(.is-vertical) {
         .steps {
-            @include until($steps-mobile-max-width) {
+            @include mx.until($steps-mobile-max-width) {
                 &.mobile-minimalist {
                     .step-items {
                         .step-item {

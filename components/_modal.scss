@@ -1,3 +1,6 @@
+@use "bulma/sass/utilities/mixins" as mx;
+@use "bulma/sass/utilities/derived-variables" as dv;
+
 .modal {
     &.is-full-screen {
         > .animation-content,
@@ -6,7 +9,7 @@
             height: 100%;
             max-height: 100vh;
             margin: 0;
-            background-color: $background;
+            background-color: dv.$background;
         }
     }
     .animation-content {
@@ -14,7 +17,7 @@
         .modal-card {
             margin: 0;
         }
-        @include mobile {
+        @include mx.breakpoint("mobile") {
             width: 100%;
         }
     }

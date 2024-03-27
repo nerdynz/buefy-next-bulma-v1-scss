@@ -1,6 +1,7 @@
 @use "bulma/sass/utilities/css-variables" as cv;
+@use "bulma/sass/components/dropdown" as dd;
 
-$colorpicker-radius: cv.getVar('dropdown-content-radius') !default;
+$colorpicker-radius: dd.$dropdown-content-radius;
 $colorpicker-hue-selected-stroke: $primary !default;
 
 .colorpicker {

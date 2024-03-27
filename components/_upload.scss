@@ -1,3 +1,7 @@
+@use "bulma/sass/utilities/derived-variables" as dv;
+@use "bulma/sass/utilities/mixins" as mx;
+@use "bulma/sass/form/file";
+
 .upload {
     position: relative;
     display: inline-flex;
@@ -26,7 +30,7 @@
             pointer-events: none;
             opacity: 0.5;
             &:after {
-                @include loader;
+                @include mx.loader;
                 top: 0;
                 left: calc(50% - 1.5em);
                 width: 3em;
@@ -36,7 +40,7 @@
         }
         &:hover,
         &.is-hovered {
-            @each $name, $pair in $file-colors {
+            @each $name, $pair in file.$file-colors {
                 $color: nth($pair, 1);
                 &.is-#{$name} {
                     border-color: $color;
