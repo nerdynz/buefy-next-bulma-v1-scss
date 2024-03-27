@@ -1,4 +1,6 @@
-## WIP: only datepicker and table is done right now. Use this as an example
+
+> :warning: WIP:  Not all scss files are included right now.. Use this as an example as I work through them. look at _index.scss to see what is included. (all should be included when complete)
+
 
 # Development 
 1. run `pnpm sass` and it will test a build and show any errors.
@@ -56,10 +58,14 @@ Bulma sass starting point here
 [Bulma With Sass Example](https://bulma.io/documentation/customize/with-sass/#create-your-sass-file)
 
 
-## Notes
-**Dont use the scss file instead build and import the resulting css fil**
-
 
 ## DEV Notes
 breakpoints are now include mx.breakpoint (mx is aliased - bulma does this)
 `@include tablet` becomes  -> `@include mx.breakpoint("tablet")`
+
+Color pairs no longer work. Instead i've used
+fn.bulmaFindLightColor($color);
+fn.bulmaFindDarkColor($color);
+fn.bulmaFindColorInvert($color);
+
+Need to test above with tags or tooltip. maybe button
