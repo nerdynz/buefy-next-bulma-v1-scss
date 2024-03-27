@@ -1,13 +1,39 @@
 
-> :warning: WIP:  Not all scss files are included right now.. Use this as an example as I work through them. look at _index.scss to see what is included. (all should be included when complete)
+> :warning: WIP: needs testing and storyboard of bulma components
+
+# Before you start
+Please look at [Bulma With Sass Example](https://bulma.io/documentation/customize/with-sass/#create-your-sass-file) this repo is just an extension to how that works. 
+
+** Importing the scss files directly will likely cause wierd/broken behaviour **
 
 
-# Development 
-1. run `pnpm sass` and it will test a build and show any errors.
-2. uncomment lines in _index.scss
-3. work through the errors by manually searching through node_modules/buefy/sass (its quite readable once you get a feel for the import/use structure)
+# Install
+1. pnpm add bulma
+2. pnpm add buefy-next-bulma-v1-scss
+3. where you import bulma after the import add buefy-next-bulma-v1-scss
+   eg. 
+```
+@use "bulma/sass" with (
+  $family-primary: '"Nunito", sans-serif',
+  $grey-dark: $brown,
+  $grey-light: $beige-light,
+  $primary: $purple,
+  $link: $pink,
+  $control-border-width: 2px,
+  $input-shadow: none
+);
 
-# Getting Started
+// Import the Google Font
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+
+
+// Import buefy-next-bulma-v1-scss  
+@import 'buefy-next-bulma-v1-scss';
+```
+4. follow [Bulma With Sass Example](https://bulma.io/documentation/customize/with-sass/#create-your-sass-file) instructions
+
+
+# Local Development 
 
 1. pnpm add bulma
 2. clone this repo
