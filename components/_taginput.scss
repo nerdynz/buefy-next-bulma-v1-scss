@@ -6,7 +6,7 @@ $taginput-height: calc(2em - 1px) !default;
     .taginput-container {
         display: flex;
         &.is-focusable {
-            @extend %input-textarea;
+            @extend %input-textarea !optional;
             padding-bottom: 0;
             padding-top: calc(0.275em - 1px);
             padding-left: 0;

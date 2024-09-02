@@ -23102,12 +23102,12 @@ button.dropdown-item.is-selected {
 }
 .carousel .carousel-indicator .indicator-item.is-active .indicator-style,
 .carousel .carousel-indicator .indicator-item .indicator-style:hover {
-  background: #576E9F;
+  background: hsl(171, 100%, 41%);
   border: 1px solid hsl(221, 14%, 100%);
 }
 .carousel .carousel-indicator .indicator-item .indicator-style {
   display: block;
-  border: 1px solid #576E9F;
+  border: 1px solid hsl(171, 100%, 41%);
   background: hsl(221, 14%, 100%);
   outline: none;
   transition: 150ms ease-out;
@@ -23172,14 +23172,14 @@ button.dropdown-item.is-selected {
 }
 .carousel-arrow .icon {
   background: hsl(221, 14%, 100%);
-  color: #576E9F;
+  color: hsl(171, 100%, 41%);
   cursor: pointer;
   border: 1px solid hsl(221, 14%, 100%);
   border-radius: 9999px;
   outline: 0;
 }
 .carousel-arrow .icon:hover {
-  border: 1px solid #576E9F;
+  border: 1px solid hsl(171, 100%, 41%);
   opacity: 1;
 }
 .carousel-arrow .icon.has-icons-left, .carousel-arrow .icon.has-icons-right {
@@ -23288,8 +23288,8 @@ button.dropdown-item.is-selected {
   background: transparent;
 }
 .b-checkbox.checkbox input[type=checkbox]:checked + .check {
-  background: #576E9F url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:%23fff' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
-  border-color: #576E9F;
+  background: hsl(171, 100%, 41%) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:%23fff' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
+  border-color: hsl(171, 100%, 41%);
 }
 .b-checkbox.checkbox input[type=checkbox]:checked + .check.is-white {
   background: hsl(221, 14%, 100%) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:rgba(0, 0, 0, 0.7)' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
@@ -23336,8 +23336,8 @@ button.dropdown-item.is-selected {
   border-color: hsl(348, 100%, 70%);
 }
 .b-checkbox.checkbox input[type=checkbox]:indeterminate + .check {
-  background: #576E9F url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect style='fill:%23fff' width='0.7' height='0.2' x='.15' y='.4'%3E%3C/rect%3E%3C/svg%3E") no-repeat center center;
-  border-color: #576E9F;
+  background: hsl(171, 100%, 41%) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect style='fill:%23fff' width='0.7' height='0.2' x='.15' y='.4'%3E%3C/rect%3E%3C/svg%3E") no-repeat center center;
+  border-color: hsl(171, 100%, 41%);
 }
 .b-checkbox.checkbox input[type=checkbox]:indeterminate + .check.is-white {
   background: hsl(221, 14%, 100%) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect style='fill:rgba(0, 0, 0, 0.7)' width='0.7' height='0.2' x='.15' y='.4'%3E%3C/rect%3E%3C/svg%3E") no-repeat center center;
@@ -23387,7 +23387,7 @@ button.dropdown-item.is-selected {
   box-shadow: 0 0 0.5em rgba(105, 116, 140, 0.8);
 }
 .b-checkbox.checkbox input[type=checkbox]:focus:checked + .check {
-  box-shadow: 0 0 0.5em rgba(87, 110, 159, 0.8);
+  box-shadow: 0 0 0.5em rgba(0, 209, 178, 0.8);
 }
 .b-checkbox.checkbox input[type=checkbox]:focus:checked + .check.is-white {
   box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.8);
@@ -23432,7 +23432,7 @@ button.dropdown-item.is-selected {
   opacity: 0.5;
 }
 .b-checkbox.checkbox:hover input[type=checkbox]:not(:disabled) + .check {
-  border-color: #576E9F;
+  border-color: hsl(171, 100%, 41%);
 }
 .b-checkbox.checkbox:hover input[type=checkbox]:not(:disabled) + .check.is-white {
   border-color: hsl(221, 14%, 100%);
@@ -23544,18 +23544,18 @@ button.dropdown-item.is-selected {
 }
 
 .b-clockpicker .card-header {
-  background-color: #576E9F;
+  background-color: hsl(171, 100%, 41%);
   color: #fff;
 }
 .b-clockpicker .b-clockpicker-face:after {
-  background-color: #576E9F;
+  background-color: hsl(171, 100%, 41%);
 }
 .b-clockpicker .b-clockpicker-face-hand {
-  background-color: #576E9F;
-  border-color: #576E9F;
+  background-color: hsl(171, 100%, 41%);
+  border-color: hsl(171, 100%, 41%);
 }
 .b-clockpicker .b-clockpicker-face-number.active {
-  background-color: #576E9F;
+  background-color: hsl(171, 100%, 41%);
   color: #fff;
 }
 .b-clockpicker.is-white .card-header {
@@ -23803,7 +23803,7 @@ button.dropdown-item.is-selected {
   margin-bottom: 2px;
 }
 .b-clockpicker-body .b-clockpicker-btn:hover, .b-clockpicker-body .b-clockpicker-btn.active {
-  background-color: #576E9F;
+  background-color: hsl(171, 100%, 41%);
   color: white;
 }
 .b-clockpicker-body .b-clockpicker-period {
@@ -24158,7 +24158,7 @@ svg.b-colorpicker-triangle .sl-range-thumb:hover {
 }
 svg.b-colorpicker-triangle .hue-range-thumb:focus,
 svg.b-colorpicker-triangle .sl-range-thumb:focus {
-  box-shadow: inset 0 0 0 1px #fff, 0 0 0 1px #576E9F, 0 0 0 0.125em rgba(87, 110, 159, 0.25);
+  box-shadow: inset 0 0 0 1px #fff, 0 0 0 1px hsl(171, 100%, 41%), 0 0 0 0.125em rgba(0, 209, 178, 0.25);
 }
 svg.b-colorpicker-triangle .hue-range-thumb:active,
 svg.b-colorpicker-triangle .sl-range-thumb:active {
@@ -24191,7 +24191,7 @@ div.b-colorpicker-square .colorpicker-square-slider-hue .hue-range-thumb:hover {
   box-shadow: inset 0 0 0 1px #fff, inset 0 0 0 2px #b5b5b5, 0 0 0 1px #b5b5b5;
 }
 div.b-colorpicker-square .colorpicker-square-slider-hue .hue-range-thumb:focus {
-  box-shadow: inset 0 0 0 1px #fff, 0 0 0 1px #576E9F, 0 0 0 0.125em rgba(87, 110, 159, 0.25);
+  box-shadow: inset 0 0 0 1px #fff, 0 0 0 1px hsl(171, 100%, 41%), 0 0 0 0.125em rgba(0, 209, 178, 0.25);
 }
 div.b-colorpicker-square .colorpicker-square-slider-hue .hue-range-thumb:active {
   cursor: grabbing;
@@ -24229,7 +24229,7 @@ div.b-colorpicker-square .colorpicker-square-slider-sl .sl-range-thumb:hover {
   box-shadow: inset 0 0 0 1px #fff, inset 0 0 0 2px #b5b5b5, 0 0 0 1px #b5b5b5;
 }
 div.b-colorpicker-square .colorpicker-square-slider-sl .sl-range-thumb:focus {
-  box-shadow: inset 0 0 0 1px #fff, 0 0 0 1px #576E9F, 0 0 0 0.125em rgba(87, 110, 159, 0.25);
+  box-shadow: inset 0 0 0 1px #fff, 0 0 0 1px hsl(171, 100%, 41%), 0 0 0 0.125em rgba(0, 209, 178, 0.25);
 }
 div.b-colorpicker-square .colorpicker-square-slider-sl .sl-range-thumb:active {
   cursor: grabbing;
@@ -24260,7 +24260,7 @@ div.b-colorpicker-square .colorpicker-square-slider-sl .sl-range-thumb:active {
   box-shadow: inset 0 0 0 1px #fff, inset 0 0 0 2px #b5b5b5, 0 0 0 1px #b5b5b5;
 }
 .b-colorpicker-alpha-slider .alpha-range-thumb:focus {
-  box-shadow: inset 0 0 0 1px #fff, 0 0 0 1px #576E9F, 0 0 0 0.125em rgba(87, 110, 159, 0.25);
+  box-shadow: inset 0 0 0 1px #fff, 0 0 0 1px hsl(171, 100%, 41%), 0 0 0 0.125em rgba(0, 209, 178, 0.25);
 }
 .b-colorpicker-alpha-slider .alpha-range-thumb:active {
   cursor: grabbing;
@@ -24532,7 +24532,7 @@ button.dropdown-item.is-selected {
   color: hsl(221, 14%, 71%);
 }
 .datepicker .datepicker-table .datepicker-body .datepicker-cell.is-today {
-  border: solid 1px rgba(87, 110, 159, 0.5);
+  border: solid 1px rgba(0, 209, 178, 0.5);
 }
 .datepicker .datepicker-table .datepicker-body .datepicker-cell.is-selectable {
   color: hsl(221, 14%, 29%);
@@ -24560,21 +24560,21 @@ button.dropdown-item.is-selected {
   border-top-left-radius: 0;
 }
 .datepicker .datepicker-table .datepicker-body .datepicker-cell.is-selected {
-  background-color: #576E9F;
+  background-color: hsl(171, 100%, 41%);
   color: var(--bulma-primary-invert);
 }
 .datepicker .datepicker-table .datepicker-body .datepicker-cell.is-selected.is-first-selected {
-  background-color: #576E9F;
+  background-color: hsl(171, 100%, 41%);
   color: var(--bulma-primary-invert);
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 .datepicker .datepicker-table .datepicker-body .datepicker-cell.is-selected.is-within-selected {
-  background-color: rgba(87, 110, 159, 0.5);
+  background-color: rgba(0, 209, 178, 0.5);
   border-radius: 0;
 }
 .datepicker .datepicker-table .datepicker-body .datepicker-cell.is-selected.is-last-selected {
-  background-color: #576E9F;
+  background-color: hsl(171, 100%, 41%);
   color: var(--bulma-primary-invert);
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -24647,7 +24647,7 @@ button.dropdown-item.is-selected {
   overflow: hidden;
 }
 .datepicker .datepicker-table .datepicker-body.has-events .datepicker-cell.is-selected .events .event.is-primary {
-  background-color: #8697bd;
+  background-color: #1fffdd;
 }
 .datepicker.is-small {
   border-radius: var(--bulma-radius-small);
@@ -26344,7 +26344,7 @@ button.dropdown-item.is-selected {
   transition: transform 150ms ease-out;
   border-radius: 50%;
   transform: scale(0);
-  background-color: #576E9F;
+  background-color: hsl(171, 100%, 41%);
 }
 .b-radio.radio input[type=radio] + .check.is-white:before {
   background: hsl(221, 14%, 100%);
@@ -26380,7 +26380,7 @@ button.dropdown-item.is-selected {
   background: hsl(348, 100%, 70%);
 }
 .b-radio.radio input[type=radio]:checked + .check {
-  border-color: #576E9F;
+  border-color: hsl(171, 100%, 41%);
 }
 .b-radio.radio input[type=radio]:checked + .check.is-white {
   border-color: hsl(221, 14%, 100%);
@@ -26422,7 +26422,7 @@ button.dropdown-item.is-selected {
   box-shadow: 0 0 0.5em rgba(105, 116, 140, 0.8);
 }
 .b-radio.radio input[type=radio]:focus:checked + .check {
-  box-shadow: 0 0 0.5em rgba(87, 110, 159, 0.8);
+  box-shadow: 0 0 0.5em rgba(0, 209, 178, 0.8);
 }
 .b-radio.radio input[type=radio]:focus:checked + .check.is-white {
   box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.8);
@@ -26473,7 +26473,7 @@ button.dropdown-item.is-selected {
   opacity: 0.5;
 }
 .b-radio.radio:hover input[type=radio]:not(:disabled) + .check {
-  border-color: #576E9F;
+  border-color: hsl(171, 100%, 41%);
 }
 .b-radio.radio:hover input[type=radio]:not(:disabled) + .check.is-white {
   border-color: hsl(221, 14%, 100%);
@@ -27648,7 +27648,7 @@ a.navbar-item.is-active, a.navbar-item.is-selected,
 .b-sidebar .sidebar-content {
   background-color: hsl(221, 14%, 96%);
   box-shadow: 5px 0px 13px 3px rgba(9, 10, 12, 0.1);
-  width: var(--sidebar-width, 5rem);
+  width: 260px;
   z-index: 39;
 }
 .b-sidebar .sidebar-content.is-white {
@@ -27709,7 +27709,7 @@ a.navbar-item.is-active, a.navbar-item.is-selected,
   transition: width 150ms ease-out;
 }
 .b-sidebar .sidebar-content.is-mini.is-mini-expand:hover:not(.is-mini-delayed):not(.is-fullwidth) {
-  width: var(--sidebar-width, 5rem);
+  width: 260px;
 }
 .b-sidebar .sidebar-content.is-mini.is-mini-expand:hover:not(.is-mini-delayed):not(.is-fullwidth).is-mini-expand-fixed {
   position: fixed;
@@ -27738,7 +27738,7 @@ a.navbar-item.is-active, a.navbar-item.is-selected,
     width: 80px;
   }
   .b-sidebar .sidebar-content.is-mini-mobile.is-mini-expand:hover:not(.is-fullwidth-mobile) {
-    width: var(--sidebar-width, 5rem);
+    width: 260px;
   }
   .b-sidebar .sidebar-content.is-mini-mobile.is-mini-expand:hover:not(.is-fullwidth-mobile).is-mini-expand-fixed {
     position: fixed;
@@ -28444,7 +28444,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   left: auto;
 }
 .b-steps .steps .step-items .step-item::before, .b-steps .steps .step-items .step-item::after {
-  background: linear-gradient(to left, hsl(221, 14%, 86%) 50%, #576E9F 50%);
+  background: linear-gradient(to left, hsl(221, 14%, 86%) 50%, hsl(171, 100%, 41%) 50%);
   background-size: 200% 100%;
   background-position: right bottom;
 }
@@ -28453,15 +28453,15 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 }
 .b-steps .steps .step-items .step-item.is-active .step-marker {
   background-color: hsl(221, 14%, 100%);
-  border-color: #576E9F;
-  color: #576E9F;
+  border-color: hsl(171, 100%, 41%);
+  color: hsl(171, 100%, 41%);
 }
 .b-steps .steps .step-items .step-item.is-active::before, .b-steps .steps .step-items .step-item.is-active::after {
   background-position: left bottom;
 }
 .b-steps .steps .step-items .step-item.is-previous .step-marker {
   color: hsl(221, 14%, 100%);
-  background-color: #576E9F;
+  background-color: hsl(171, 100%, 41%);
 }
 .b-steps .steps .step-items .step-item.is-previous::before, .b-steps .steps .step-items .step-item.is-previous::after {
   background-position: left bottom;
@@ -28685,7 +28685,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   padding: 1em 0;
 }
 .b-steps.is-vertical > .steps .step-items .step-item::before, .b-steps.is-vertical > .steps .step-items .step-item::after {
-  background: linear-gradient(to top, hsl(221, 14%, 86%) 50%, #576E9F 50%);
+  background: linear-gradient(to top, hsl(221, 14%, 86%) 50%, hsl(171, 100%, 41%) 50%);
   background-size: 100% 200%;
   background-position: left bottom;
 }
@@ -28980,7 +28980,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   border-radius: 0.375rem;
 }
 .switch input[type=checkbox]:checked + .check {
-  background: #576E9F;
+  background: hsl(171, 100%, 41%);
 }
 .switch input[type=checkbox]:checked + .check.is-white {
   background: hsl(221, 14%, 100%);
@@ -29061,7 +29061,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   box-shadow: 0 0 0.5em rgba(255, 102, 133, 0.8);
 }
 .switch input[type=checkbox]:focus:checked + .check, .switch input[type=checkbox]:active:checked + .check {
-  box-shadow: 0 0 0.5em rgba(87, 110, 159, 0.8);
+  box-shadow: 0 0 0.5em rgba(0, 209, 178, 0.8);
 }
 .switch input[type=checkbox]:focus:checked + .check.is-white, .switch input[type=checkbox]:active:checked + .check.is-white {
   box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.8);
@@ -29142,7 +29142,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   background: rgba(255, 102, 133, 0.9);
 }
 .switch:hover input[type=checkbox]:checked + .check {
-  background: rgba(87, 110, 159, 0.9);
+  background: rgba(0, 209, 178, 0.9);
 }
 .switch:hover input[type=checkbox]:checked + .check.is-white {
   background: rgba(255, 255, 255, 0.9);
@@ -29294,7 +29294,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   background: hsl(221, 14%, 71%);
 }
 .switch.is-outlined input[type=checkbox]:checked + .check {
-  border-color: #576E9F;
+  border-color: hsl(171, 100%, 41%);
 }
 .switch.is-outlined input[type=checkbox]:checked + .check.is-white {
   background: transparent;
@@ -29374,7 +29374,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   background: hsl(348, 100%, 70%);
 }
 .switch.is-outlined input[type=checkbox]:checked + .check:before {
-  background: #576E9F;
+  background: hsl(171, 100%, 41%);
 }
 .switch.is-outlined:hover input[type=checkbox] + .check {
   background: transparent;
@@ -29382,7 +29382,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 }
 .switch.is-outlined:hover input[type=checkbox]:checked + .check {
   background: transparent;
-  border-color: rgba(87, 110, 159, 0.9);
+  border-color: rgba(0, 209, 178, 0.9);
 }
 .switch.is-outlined:hover input[type=checkbox]:checked + .check.is-white {
   border-color: rgba(255, 255, 255, 0.9);
@@ -31308,7 +31308,7 @@ button.tag:active,
   bottom: auto;
   left: 50%;
   transform: translateX(-50%);
-  border-top: 5px solid #576E9F;
+  border-top: 5px solid hsl(171, 100%, 41%);
   border-right: 5px solid transparent;
   border-left: 5px solid transparent;
 }
@@ -31359,7 +31359,7 @@ button.tag:active,
   left: auto;
   transform: translateY(-50%);
   border-top: 5px solid transparent;
-  border-right: 5px solid #576E9F;
+  border-right: 5px solid hsl(171, 100%, 41%);
   border-bottom: 5px solid transparent;
 }
 .b-tooltip.is-right.is-white .tooltip-content::before {
@@ -31409,7 +31409,7 @@ button.tag:active,
   left: 50%;
   transform: translateX(-50%);
   border-right: 5px solid transparent;
-  border-bottom: 5px solid #576E9F;
+  border-bottom: 5px solid hsl(171, 100%, 41%);
   border-left: 5px solid transparent;
 }
 .b-tooltip.is-bottom.is-white .tooltip-content::before {
@@ -31460,7 +31460,7 @@ button.tag:active,
   transform: translateY(-50%);
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 5px solid #576E9F;
+  border-left: 5px solid hsl(171, 100%, 41%);
 }
 .b-tooltip.is-left.is-white .tooltip-content::before {
   border-left-color: hsl(221, 14%, 100%);

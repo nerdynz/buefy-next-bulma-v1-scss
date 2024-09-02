@@ -1,9 +1,9 @@
 // Scheme Hue and Saturation
 
-$scheme-h: 221;
-$scheme-s: 14%;
-$dark-l: 20%;
-$light-l: 90%;
+$scheme-h: 221 !default;
+$scheme-s: 14% !default;
+$dark-l: 20% !default;
+$light-l: 90% !default;
 
 // Colors
 
@@ -31,14 +31,14 @@ $blue: hsl(233, 100%, 63%) !default;
 $purple: hsl(271, 100%, 71%) !default;
 $red: hsl(348, 100%, 70%) !default;
 
-$primary: #576E9F;
+$primary: $turquoise !default;
 
-$info: $cyan;
-$success: $green;
-$warning: $yellow;
-$danger: $red;
+$info: $cyan !default;
+$success: $green !default;
+$warning: $yellow !default;
+$danger: $red !default;
 
-$link: $blue;
+$link: $blue !default;
 // Typography
 
 $family-sans-serif: "Inter", "SF Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
@@ -177,12 +177,10 @@ $hex-opacity-10: 1A;
 $hex-opacity-05: 0A;
 $hex-opacity-0: 00;
 
-$sidebar-width: var(--sidebar-width, 5rem);
 
 $header-family: 'Saira', sans-serif;
 $body-family: 'Nunito', sans-serif;
 
-$input-height: var(--input-height,  3rem);
 $input-icon-color: $grey-lighter;
 $input-icon-active-color: $grey;
 $input-border-color: $grey-lighter;
