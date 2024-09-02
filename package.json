@@ -1,6 +1,6 @@
 {
   "name": "buefy-next-bulma-v1-scss",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "bulma v1 scss/sass compatible with buefy-next",
   "main": "_index.scss",
   "scripts": {
