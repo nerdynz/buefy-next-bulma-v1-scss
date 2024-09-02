@@ -162,7 +162,7 @@ $cssvars-prefix: "bulma-" !default;
 $helpers-prefix: "is-" !default;
 $helpers-has-prefix: "has-" !default;
 
-$card-radius: $radius;
+$card-radius: $radius !default;
 
 $hex-opacity-100: FF;
 $hex-opacity-90: E6;
@@ -177,18 +177,17 @@ $hex-opacity-10: 1A;
 $hex-opacity-05: 0A;
 $hex-opacity-0: 00;
 
+$header-family: "Saira", sans-serif !default;
+$body-family: "Nunito", sans-serif !default;
 
-$header-family: 'Saira', sans-serif;
-$body-family: 'Nunito', sans-serif;
-
-$input-icon-color: $grey-lighter;
-$input-icon-active-color: $grey;
-$input-border-color: $grey-lighter;
+$input-icon-color: $grey-lighter !default;
+$input-icon-active-color: $grey !default;
+$input-border-color: $grey-lighter !default;
 
 $speed-slow: 150ms !default;
 $speed-slower: 250ms !default;
 
-$input-focus-border-color: $grey-dark;
+$input-focus-border-color: $grey-dark !default;
 
-$input-focus-box-shadow-size: 0 0 0 0.125em;
-$input-focus-box-shadow-color: rgba($link, 0.25);
+$input-focus-box-shadow-size: 0 0 0 0.125em !default;
+$input-focus-box-shadow-color: rgba($link, 0.25) !default;
